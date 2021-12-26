@@ -1,11 +1,17 @@
-import Header from '../UI/Header'
+import Header from '../UI/Header/Header'
+import SideNav from '../UI/SideNav/SideNav'
 
 const MainLayout = (props) => {
-  return(<>
-  <Header />  
+  return(<div style={{
+    background:
+    "linear-gradient(135deg, rgba(2,27,64,1) 11%, rgba(255,104,0,1) 100%)", minHeight:"100vh"
+    }}
+    >
+  <Header /> 
+  <SideNav /> 
   <section className="content-container">
     {props.children}
   </section>
-  </>)
+  </div>)
 }
 export default MainLayout;
