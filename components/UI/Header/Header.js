@@ -1,4 +1,6 @@
 import Account from "../Account/Account";
+import SearchModal from "../SearchModal/SearchModal";
+
 
 
 const Header = (props) => {
@@ -17,6 +19,7 @@ const Header = (props) => {
       <div ClasssName="top-header__user-name">Bryant</div>
     </div>
     <Account />
+    <SearchModal />
   </header>)
 }
 export default Header;
