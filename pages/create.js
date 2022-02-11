@@ -21,6 +21,7 @@ export default function CreateUser() {
       }
       users.push(user)
       ls('users', users)
+      router.push('/login')
 
       console.log('users:', users)
       console.log('lsusers', ls('users'))
@@ -35,7 +36,7 @@ export default function CreateUser() {
       ls('users', users)
       console.log('users:', users)
       console.log('lsusers', ls('users'))
-      router.push('/Login')
+      router.push('/login')
     }
   }
   return (
@@ -47,13 +48,11 @@ export default function CreateUser() {
         </div>
 
         <div className="create-user__form">
-          <img
-            className="create-user__user-img"
-            src={globalState.defaultUserImg}
-          ></img>
+          <img className="create-user__user-img"
+            src={globalState.defaultUserImg} />
           <div className="create-user__input-group">
             <label>Name</label>
-            <input value={ globalState.user } onChange={globalState.createUserAction} type="text" className="create-user__inputText" />
+            <input value={globalState.user} onInput={globalState.createUserAction} type="text" className="create-user__inputText" />
             <div className="create-user__colors">
               <div
                 className="create-user__color create-user__color--active"
@@ -100,7 +99,7 @@ export default function CreateUser() {
         </div>
       <div className="create-user__buttons">
         <button className="create-user__cancel">Cancel</button>
-        <button className="create-user__save" onClick= {saveUser}>Save</button>
+        <button className="create-user__save" onClick={saveUser}>Save</button>
       </div>
       </div>
     </div>
