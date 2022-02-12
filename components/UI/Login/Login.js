@@ -18,6 +18,7 @@ const Login = () => {
     }
     console.log("load effect", users);
   }, []);
+  // router.push('/');
 
   console.log("declared users", users);
   const selectUser = (id) => {

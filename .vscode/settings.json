@@ -1,0 +1,4 @@
+{
+  "rest-client.enableTelemetry": false,
+  "code-runner.enableAppInsights": false
+}
